@@ -1,11 +1,4 @@
-// Package mapstructure exposes functionality to convert an arbitrary
-// map[string]interface{} into a native Go structure.
-//
-// The Go structure can be arbitrarily complex, containing slices,
-// other structs, etc. and the decoder will properly decode nested
-// maps and so on into the proper structures in the native Go struct.
-// See the examples to see what the decoder is capable of.
-package mapstructure
+package hmap
 
 import (
 	"encoding/json"
@@ -88,8 +81,8 @@ type DecoderConfig struct {
 	// value.
 	Result interface{}
 
-	// The tag name that mapstructure reads for field names. This
-	// defaults to "mapstructure"
+	// The tag name that map reads for field names. This
+	// defaults to "map"
 	TagName string
 }
 
@@ -206,7 +199,7 @@ func NewDecoder(config *DecoderConfig) (*Decoder, error) {
 	}
 
 	if config.TagName == "" {
-		config.TagName = "mapstructure"
+		config.TagName = "map"
 	}
 
 	result := &Decoder{

@@ -1,4 +1,4 @@
-package mapstructure
+package hmap
 
 import (
 	"fmt"
