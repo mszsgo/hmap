@@ -1,3 +1,6 @@
+## 1.2.0
+* rename hmap
+
 ## 1.1.2
 
 * Fix error when decode hook decodes interface implementation into interface
